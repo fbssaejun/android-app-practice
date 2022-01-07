@@ -7,6 +7,8 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
+import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -16,13 +18,18 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
     }
 
+    //disables button when it is clicked
     public void disable(View v) {
         findViewById(R.id.button5).setEnabled(false);
         ((Button)findViewById(R.id.button5)).setText("New New Disabled");
 
-//        v.setEnabled(false);
-//        Button button = (Button) v;
-//        button.setText("Disabled");
-//        Log.d("success", "Button disabled");
+    }
+
+    //Gets the text from user input
+    public void handleText(View v) {
+        EditText t = findViewById(R.id.source);
+        String input = t.getText().toString();
+
+        Log.d("info", input);
     }
 }
