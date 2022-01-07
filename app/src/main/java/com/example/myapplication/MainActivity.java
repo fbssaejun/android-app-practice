@@ -2,6 +2,7 @@ package com.example.myapplication;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import android.util.Log;
@@ -32,5 +33,12 @@ public class MainActivity extends AppCompatActivity {
         String input = t.getText().toString();
         ((TextView)findViewById((R.id.output))).setText(input);
         Toast.makeText(this, input, Toast.LENGTH_LONG).show();
+    }
+
+    public void launchSettings(View v) {
+        //Launch a new activity
+
+        Intent i = new Intent(this, SettingsActivity.class);
+        startActivity(i);
     }
 }
