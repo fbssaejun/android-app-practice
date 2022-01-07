@@ -29,6 +29,7 @@ public class MainActivity extends AppCompatActivity {
     public void handleText(View v) {
         EditText t = findViewById(R.id.source);
         String input = t.getText().toString();
+        ((TextView)findViewById((R.id.output))).setText(input);
 
         Log.d("info", input);
     }
