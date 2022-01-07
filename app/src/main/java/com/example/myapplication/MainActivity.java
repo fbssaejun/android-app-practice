@@ -40,6 +40,8 @@ public class MainActivity extends AppCompatActivity {
         //Launch a new activity
 
         Intent i = new Intent(this, SettingsActivity.class);
+        String message = ((EditText)findViewById(R.id.source)).getText().toString();
+        i.putExtra("COOL", message);
         startActivity(i);
     }
 }
