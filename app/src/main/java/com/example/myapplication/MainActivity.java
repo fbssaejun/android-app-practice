@@ -13,7 +13,7 @@ import android.widget.Toast;
 
 import butterknife.ButterKnife;
 import butterknife.BindView;
-
+import butterknife.OnClick;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -28,7 +28,7 @@ public class MainActivity extends AppCompatActivity {
         mainTitle.setText("This is the title");
         setTitle("Home");
     }
-
+    
     //disables button when it is clicked
     public void disable(View v) {
         findViewById(R.id.button5).setEnabled(false);
