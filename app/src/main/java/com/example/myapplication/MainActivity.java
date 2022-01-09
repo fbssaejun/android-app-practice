@@ -18,14 +18,14 @@ import butterknife.BindView;
 
 public class MainActivity extends AppCompatActivity {
 
-    @BindView(R.id.titleText) TextView appTitle;
+    @BindView(R.id.titleText) TextView mainTitle;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         ButterKnife.bind(this);
-        appTitle.setText("This is the title");
+        mainTitle.setText("This is the title");
         setTitle("Home");
     }
 
