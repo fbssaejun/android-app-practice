@@ -6,16 +6,20 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Toast;
 
+import butterknife.BindString;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 
 public class ButtonsActivity extends AppCompatActivity {
 
+    @BindString(R.string.back_button_toaster) String BackToaster;
+    @BindString(R.string.next_button_toaster) String NextToaster;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        ButterKnife.bind(this);
         setContentView(R.layout.activity_buttons);
         findViewById(R.id.backButton).setOnClickListener(view -> onBackButtonClicked());
         findViewById(R.id.nextButton).setOnClickListener(view -> onNextButtonClicked());
@@ -35,10 +39,10 @@ public class ButtonsActivity extends AppCompatActivity {
 //    }
 
     protected void onBackButtonClicked() {
-        Toast.makeText(this, "Back Clicked", Toast.LENGTH_SHORT).show();
+        Toast.makeText(this, BackToaster, Toast.LENGTH_LONG).show();
     }
 
     protected void onNextButtonClicked() {
-        Toast.makeText(this, "Next Clicked", Toast.LENGTH_SHORT).show();
+        Toast.makeText(this, NextToaster, Toast.LENGTH_LONG).show();
     }
 }
