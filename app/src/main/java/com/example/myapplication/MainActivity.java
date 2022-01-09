@@ -52,4 +52,9 @@ public class MainActivity extends AppCompatActivity {
         i.putExtra("COOL", message);
         startActivity(i);
     }
+
+    public void launchButtons(View v) {
+        Intent i = new Intent(this, ButtonsActivity.class);
+        startActivity(i);
+    }
 }
