@@ -39,10 +39,10 @@ public class ButtonsActivity extends AppCompatActivity {
 //    }
 
     protected void onBackButtonClicked() {
-        Toast.makeText(this, BackToaster, Toast.LENGTH_LONG).show();
+        Toast.makeText(this, BackToaster, Toast.LENGTH_SHORT).show();
     }
 
     protected void onNextButtonClicked() {
-        Toast.makeText(this, NextToaster, Toast.LENGTH_LONG).show();
+        Toast.makeText(this, NextToaster, Toast.LENGTH_SHORT).show();
     }
 }
